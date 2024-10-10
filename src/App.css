@@ -1,0 +1,60 @@
+/*this is done to keep size unchanged after padding or changes in size */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+
+
+body{
+  margin: 0;
+  background: linear-gradient(to left, #cc22cc, #5149c7 );
+}
+/* created CSS grids for this  */
+.calculator-grid{
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4,6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
+}
+/* i just figued out you can change the cursor */
+.calculator-grid > button{
+  cursor: pointer;
+  border-radius: .25rem;
+  font-size: 2rem;
+  background-color: #ffffff98;
+}
+
+.calculator-grid > button:hover{
+  background-color: #ffffff;
+}
+
+.confetti{
+  position: flexible;
+  right: 40%;
+}
+.span-two{
+  grid-column: span 2;
+}
+/* the 1 and -1 mean span from first column to last column */
+.output{
+  grid-column: 1/ -1;
+  background-color: #352c5870;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand{
+  color:#fffefe81;
+  font-size: 1.5rem;
+}
+
+.output .current-operand{
+  color: #ffffff;
+  font-size: 2.5rem;
+}
